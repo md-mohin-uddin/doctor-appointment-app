@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import logo from "./../../assets/images/logo.png";
 import { RiLinkedinFill } from "react-icons/ri";
 import {
-  AiFillYoutube,
+  AiFillFacebook,
   AiFillGithub,
   AiOutlineInstagram,
 } from "react-icons/ai";
 
 const socialLinks = [
   {
-    path: "https://github.com/md-mohin-uddin",
-    icon: <AiFillYoutube className="group-hover:text-white w-4 h-5" />,
+    path: "https://www.facebook.com/UMdMohin/",
+    icon: <AiFillFacebook className="group-hover:text-white w-4 h-5" />,
   },
   {
     path: "https://github.com/md-mohin-uddin",
@@ -83,7 +83,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="" />
             <p className="text-[16px] leading-7 font-[400] text-textColor">
-              Copyright @ {year} developed by Md Mohin Uddin all right reserved
+              Copyright © {year} developed by Md Mohin Uddin all right reserved
             </p>
 
             <div className="flex items-center gap-3 mt-4">
