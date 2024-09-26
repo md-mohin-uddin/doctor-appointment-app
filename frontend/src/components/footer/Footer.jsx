@@ -7,6 +7,7 @@ import {
   AiFillFacebook,
   AiFillGithub,
   AiOutlineInstagram,
+  AiFillTwitterCircle,
 } from "react-icons/ai";
 
 const socialLinks = [
@@ -25,6 +26,10 @@ const socialLinks = [
   {
     path: "https://www.linkedin.com/in/mdmohinuddin/",
     icon: <RiLinkedinFill className="group-hover:text-white w-4 h-5" />,
+  },
+  {
+    path: "https://www.twitter.com/in/m_mohin_uddin/",
+    icon: <AiFillTwitterCircle className="group-hover:text-white w-4 h-5" />,
   },
 ];
 const quickLinks01 = [
