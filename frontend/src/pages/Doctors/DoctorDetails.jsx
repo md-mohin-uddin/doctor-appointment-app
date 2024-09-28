@@ -3,9 +3,11 @@ import doctorImg from "../../assets/images/doctor-img02.png";
 import starIcon from "../../assets/images/Star.png";
 import DoctorAbout from "./DoctorAbout";
 import Feedback from "./Feedback";
+import SidePanel from "./SidePanel";
 
 const DoctorDetails = () => {
-  const [tab, setTab] = useState();
+  const [tab, setTab] = useState("about"); // Set initial tab to "about"
+
   return (
     <section>
       <div className="max-w-[1170px] px-5 mx-auto">
@@ -25,7 +27,7 @@ const DoctorDetails = () => {
                 </h3>
                 <div className="flex items-center gap-[6px]">
                   <span className="flex items-center gap-[6px] text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
-                    <img src={starIcon} alt="" />
+                    <img src={starIcon} alt="Star rating" />
                     4.8
                   </span>
                   <span className="text-[14px] leading-5 lg:text-[16px] lg:leading-7 font-[400] text-textColor">
@@ -46,6 +48,7 @@ const DoctorDetails = () => {
                     ? "border-b border-solid border-primaryColor"
                     : ""
                 } py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}
+                aria-selected={tab === "about"}
               >
                 About
               </button>
@@ -56,6 +59,7 @@ const DoctorDetails = () => {
                     ? "border-b border-solid border-primaryColor"
                     : ""
                 } py-2 px-5 mr-5 text-[16px] leading-7 text-headingColor font-semibold`}
+                aria-selected={tab === "feedback"}
               >
                 Feedback
               </button>
@@ -67,7 +71,9 @@ const DoctorDetails = () => {
           </div>
 
           {/* Additional Details Placeholder */}
-          <div></div>
+          <div>
+            <SidePanel />
+          </div>
         </div>
       </div>
     </section>
